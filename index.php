@@ -8,35 +8,12 @@
       <script type="text/javascript" src="ajax/jquery-1.2.3.min.js"></script>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <script>
-     $(document).ready(function() {
-
-$().ajaxStart(function() {
-  $('#loading').show();
-  $('#result').hide();
-}).ajaxStop(function() {
-  $('#loading').hide();
-  $('#result').fadeIn('slow');
-});
-
-$('#myForm').submit(function() {
-  $.ajax({
-    type: 'POST',
-    url: $(this).attr('action'),
-    data: $(this).serialize(),
-    success: function(data) {
-      $('#result').html(data);
-    }
-  })
-  return false;
-});
-})
-     </script>
+      
     </head>
 
     <body>
-    <form id="myForm" method="post" action="test.php">
-    Function Point
+    <?php require_once("test.php")?>
+    <form method="post" action="index.php">
     <div class="row container">
         <div class="col s12 m6 l6 card">
         <table class="tg">
@@ -262,7 +239,7 @@ $('#myForm').submit(function() {
         <tr>
 
   <td height="23" colspan="4" align="right">
-  <button class="btn waves-effect waves-light" type="submit" name="action" value="Submit">Hitung Semua
+  <button class="btn waves-effect waves-light" type="submit" name="submit" value="Submit">Hitung Semua
     <i class="material-icons right">send</i>
   </button>
   <!--  <input type="submit" value="Submit" /> -->
@@ -271,9 +248,12 @@ $('#myForm').submit(function() {
   </tr>
       </table>
 </form>
-  
-<div id="loading" style="display:none;"><img src="ajax/loading.gif" alt="loading..." /></div>
-<div id="result" style="display:none;"></div>
+<?php if(isset($_POST['submit'])){ 
+  echo 'Hasil function pointnya adalah '.$fp.'<br>Hasil dari Line Of Codesnya adalah '.$loc.'<br>' ;
+  echo 'Estimasi biaya development sofware adalah '.$biaya."<br>Estimasi khusus produksi sofware adalah {$d}hari {$h}jam {$m}menit <br>" ; ?>
+		<?php }else{ ?>
+			asd
+		<?php } ?>		
         </div>
     </div>
 

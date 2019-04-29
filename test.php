@@ -1,5 +1,5 @@
 <?php
-  
+ if(isset($_POST['submit'])){ 
   $data = $_POST['data'];
   $tdi = $_POST['tdi'];
   $sumtdi = array_sum($tdi);
@@ -45,8 +45,8 @@
   $h = floor (($menit - $d * 1440) / 60);
   $m = $menit - ($d * 1440) - ($h * 60);
   //echo "{$menit}min converts to {$d}d {$h}h {$m}m";
-  echo 'Hasil function pointnya adalah '.$fp.'<br>Hasil dari Line Of Codesnya adalah '.$loc.'<br>' ;
-  echo 'Estimasi biaya development sofware adalah '.$biaya."<br>Estimasi khusus produksi sofware adalah {$d}hari {$h}jam {$m}menit <br>" ;
+  //echo 'Hasil function pointnya adalah '.$fp.'<br>Hasil dari Line Of Codesnya adalah '.$loc.'<br>' ;
+  //echo 'Estimasi biaya development sofware adalah '.$biaya."<br>Estimasi khusus produksi sofware adalah {$d}hari {$h}jam {$m}menit <br>" ;
   /*foreach($tdi as $key => $val){
 
   echo 'data = '.$tdi[$key].'<br/>';
@@ -54,4 +54,5 @@
   }*/
 
   //echo array_sum($cobaq);
-  ?>
+} 
+?>
