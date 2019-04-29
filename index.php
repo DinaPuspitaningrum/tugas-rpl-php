@@ -251,7 +251,6 @@
   echo 'Hasil function pointnya adalah '.$fp.'<br>Hasil dari Line Of Codesnya adalah '.$loc.'<br>' ;
   echo 'Estimasi biaya development sofware adalah '.$biaya."<br>Estimasi khusus produksi sofware adalah {$d}hari {$h}jam {$m}menit <br>" ; ?>
 		<?php }else{ ?>
-			asd
 		<?php } ?>		
         </div>
     </div>
