@@ -11,7 +11,7 @@
     </head>
 
     <body>
-    <?php require_once("test.php")?>
+    <?php require_once("logical.php")?>
     <form method="post" action="index.php">
     <div class="row container">
         <div class="col s12 m6 l6 card">
