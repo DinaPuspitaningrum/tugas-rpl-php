@@ -36,6 +36,7 @@ $('#myForm').submit(function() {
 
     <body>
     <form id="myForm" method="post" action="test.php">
+    Function Point
     <div class="row container">
         <div class="col s12 m6 l6 card">
         <table class="tg">
