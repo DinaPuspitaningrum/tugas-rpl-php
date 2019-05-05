@@ -12,6 +12,11 @@
 
     <body>
     <?php require_once("logical.php")?>
+    <!-- 
+      Line 14, require_once, berfungsi sebagai memanggil file logical.php.
+      Yang bisa disimpulkan meringkah kode pada file index.php agar tidak terlalu panjang,
+      maka kita buat file di luar index 
+    -->
     <form method="post" action="index.php">
     <div class="row container">
         <div class="col s12 m6 l6 card">
@@ -130,18 +135,6 @@
   </tr>
 </tbody>
 </table>
-        <!--<form method="get" name="frm" action="">
-
-  <input name="jumlah" type="text" />
-  <div class="input-field">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
-        </div>
-
-  <input type="submit" name="btnJumlah" value="Ok" />
-
-  </form>-->
-  
   </div>
         <div class="col s12 m6 l6 card">
         
@@ -241,9 +234,10 @@
   <button class="btn waves-effect waves-light" type="submit" name="submit" value="Submit">Hitung Semua
     <i class="material-icons right">send</i>
   </button>
-  <!--  <input type="submit" value="Submit" /> -->
   </td>
-
+ <!-- 
+   Line 21 sampai 231, sudah ada pada laporan https://gitlab.com/afrizal-my/nguliah-rpl-php/raw/master/penjelasan-code.pdf
+ -->
   </tr>
       </table>
 </form>
@@ -251,11 +245,14 @@
   echo 'Hasil function pointnya adalah '.$fp.'<br>Hasil dari Line Of Codesnya adalah '.$loc.'<br>' ;
   echo 'Estimasi biaya development sofware adalah '.$biaya."<br>Estimasi khusus produksi sofware adalah {$d}hari {$h}jam {$m}menit <br>" ; ?>
 		<?php }else{ ?>
-		<?php } ?>		
+		<?php } ?>
+  <!-- 
+    line 243, jika user mengklik tombol submit maka akan menampilkan hasil perhitungan dari logical.php.
+      Jika tidak, maka hanya menampilkan halaman kosong.
+  -->		
         </div>
     </div>
 
-      <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="assets/js/materialize.min.js"></script>
       
       <script> 
